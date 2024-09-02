@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="name">Julia Arukakkal</div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-lg fa-home"></i>   Home</a></li>
+                <li><a href="page1.html"><i class="fa fa-lg fa-star"></i>   Overview</a></li>
+                <li><a href="page2.html"><i class="fa fa-lg fa-laptop"></i>   Projects</a></li>
+                <li><a href="page3.html"><i class="fa fa-lg fa-handshake-o"></i>   Service</a></li>
+                <li><a href="page4.html"><i class="fa fa-lg fa-pencil"></i>   Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2> My Prompt</h2>
+    Create html, css, javascript for website blog posts where i can submit & add blog posts and it will automatically be added to website
+
+        <section id="new-post">
+            <h2>Add New Post</h2>
+            <form id="post-form">
+                
+                <label for="post-title">Title:</label>
+                <input type="text" id="post-title" required>
+                <label for="post-content">Content:</label>
+                <textarea id="post-content" required></textarea>
+                <button type="submit">Submit Post</button>
+            </form>
+        </section>
+        <section id="blog-posts">
+            <h2>Blog Posts</h2>
+            <div id="posts-container"></div>
+        </section>
+    </main>
+    <nav class="navbar">
+        <div class="links">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/julia-arukakkal-416358aa/"><i class="fa fa-lg fa-linkedin-square"></i>   Linkedin</a></li>
+                <li><a href="https://github.com/juaruk"><i class="fa fa-lg fa-github"></i>   Personal GitHub</a></li>
+                <li><a href="mailto:julia.arukakkal@gmail.com"><i class="fa fa-lg fa-envelope"></i>   Email</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+    
+</body>
+</html>
