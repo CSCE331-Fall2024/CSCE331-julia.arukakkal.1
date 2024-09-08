@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+:root {
+    --bg-volcano: #0c0201;
+    --pinkish-text: #ceaba7;
+    --accent: #cd2905;
+    --header: #3e0902;
+    --section: #754249;
+    --name: #a8d4c3;
+    --photos: #02211f;
+}
 body {
-    background-color: #FFF5CC; /* Warm light background */
-    color: #5D0100; /* Dark warm text color */
+    background-color: var(--bg-volcano); /* Warm light background */
+    color: var(--pinkish-text); /* Dark warm text color */
     font-family: 'Roboto', sans-serif; /* Clean, readable font */
     font: weight 10px;
     margin: 0;
@@ -9,16 +19,17 @@ body {
   }
 
 header {
-    background-color: #FB7F41; /* Vibrant warm color */
+    background-color: var(--header); /* Vibrant warm color */
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #A24700; /* Warm dark color for headings */
+    color: var(--header-text); /* Warm dark color for headings */
     font-family: Georgia, sans-serif; /* More elegant font for headings */
     font-weight:400;
+    font-size:30px;
     margin-bottom: 20px;
 }
 
@@ -26,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 /* General navbar styling */
 /* General navbar styling */
 .navbar {
-    background-color: #5D0100; /* Dark background color */
+    background-color: var(--header); /* Dark background color */
     padding: 10px 20px; /* Add padding for spacing */
     display: flex; /* Ensure the navbar itself is a flex container */
     justify-content: space-between; /* Space between the name and links */
@@ -51,8 +62,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Styling for the name section */
 .navbar .name {
-    color: #F5E1A4; /* Peach cream color */
+    color: var(--name); /* Peach cream color */
     text-decoration: none; /* Remove underline */
+    background-color: var(--photos); /* Darker background color on hover */
+    border-radius: 6px; 
     padding: 15px;
     font-size: 150%; /* Larger font size */
     font-family: 'Gloock', 'Georgia'; /* Font for name */
@@ -60,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Styling for the links */
 .navbar a {
-    color: #F5E1A4; /* Peach cream color */
+    color: var(--pinkish-text); /* Peach cream color */
     text-decoration: none; /* Remove underline */
     text-align: center;
     padding: 13px; /* Padding around the link text */
@@ -72,9 +85,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hover effect for links */
 .navbar a:hover {
-    background-color: #3D0000; /* Darker background color on hover */
+    background-color: var(--accent); /* Darker background color on hover */
     border-radius: 6px; /* Optional: rounded corners for hover effect */
-    color: #FFF5CC; /* Optional: change text color on hover for better contrast */
+    color: var(--mint-text); /* Optional: change text color on hover for better contrast */
     font-size: 90%;
 
 }
@@ -84,16 +97,39 @@ h1, h2, h3, h4, h5, h6 {
     display: block; /* Ensure links take full space of list items */
 }
 
-.image_container{
-    background-color: #fff0b8;
+.image_container {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust as needed */
+    background-image: url('Landing_Page.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+
+.image_container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust the height of the gradient overlay as needed */
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bg-volcano) 100%);
+    background-size: cover;
+    z-index: 1; /* Ensure the gradient is on top of the image */
+}
+
 .center {
+    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 80%; /* Adjust to control the width of the centered element */
+    z-index: 2; /* Ensure the centered content is on top of the gradient */
 }
-  
+
+
 main {
     padding: 2rem;
     max-width: 800px;
