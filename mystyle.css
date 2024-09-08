@@ -6,8 +6,12 @@
     --accent: #cd2905;
     --header: #3e0902;
     --section: #754249;
+    --darker-section: #250801;
     --name: #a8d4c3;
+    --dark-mint: #baead8;
     --photos: #02211f;
+    --main-font: 'Gloock'
+    --secondary-font: 'Roboto'
 }
 body {
     background-color: var(--bg-volcano); /* Warm light background */
@@ -16,7 +20,10 @@ body {
     font: weight 10px;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
+
+  
 
 header {
     background-color: var(--header); /* Vibrant warm color */
@@ -29,8 +36,16 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--header-text); /* Warm dark color for headings */
     font-family: Georgia, sans-serif; /* More elegant font for headings */
     font-weight:400;
-    font-size:30px;
     margin-bottom: 20px;
+}
+
+h1{
+    font-size:30px;
+}
+
+h2{
+    color: #f87658;
+    font-size:25px;
 }
 
 
@@ -119,7 +134,9 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     z-index: 1; /* Ensure the gradient is on top of the image */
 }
-
+.geode{
+    transform: scale(0.9);
+}
 .center {
     position: relative;
     display: block;
@@ -128,7 +145,65 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 80%; /* Adjust to control the width of the centered element */
     z-index: 2; /* Ensure the centered content is on top of the gradient */
 }
+.border_container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 90vh;
+    height: 85vh; /* Adjust as needed */
+    background-image: url('canyon_border.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
+/* Image acting as a border */
+
+.oval_text_container {
+    position: absolute;
+    background-size: contain;
+    top: 48%;
+    left: 50%;
+    transform: translate(-70%, -33%);
+    width: 35%; /* Adjust size for the oval */
+    height: 43%; /* Adjust height for the oval */
+    background-color: var(--darker-section); /* Dark semi-transparent background */
+    opacity: 0.95;
+    color: var(--dark-mint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a perfect oval */
+    text-align: center;
+    padding: 0px;
+    font-size: 160%;
+}
+
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+    /*grid-template-rows: repeat(2, 1fr); /* Create 2 equal-height rows */
+    gap: 0px;
+    row-gap: 0px;
+    padding: 0px;
+    /*width: 100vw; /* Full width of the container */
+    /*max-width: 50%;
+    height: 100vh; /* Full viewport height */
+    justify-items: center;
+    background-size:cover;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+/*.flex-box > * {
+    width: 100%; /* Ensure items take full width of their grid cell */
+
+
+/** {
+    box-sizing: border-box;
+}*/
 
 main {
     padding: 2rem;
