@@ -112,6 +112,69 @@ h2{
     display: block; /* Ensure links take full space of list items */
 }
 
+/* General navbar styling */
+/* General navbar styling */
+.footer_navbar {
+    background-color: var(--header); /* Dark background color */
+    padding: 10px 20px; /* Add padding for spacing */
+    display: flex; /* Ensure the navbar itself is a flex container */
+    justify-content: space-between; /* Space between the name and links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for the list within the navbar */
+.footer_navbar ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display list items in a row */
+    gap: 17px; /* Space between links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styling for list items */
+.footer_navbar ul li {
+    margin: 0; /* Remove default margin from list items */
+    padding: 0; /* Remove default padding if needed */
+}
+
+/* Styling for the name section */
+.footer_navbar .name {
+    color: var(--name); /* Peach cream color */
+    text-decoration: none; /* Remove underline */
+    background-color: var(--photos); /* Darker background color on hover */
+    border-radius: 6px; 
+    padding: 15px;
+    font-size: 150%; /* Larger font size */
+    font-family: 'Gloock', 'Georgia'; /* Font for name */
+}
+
+/* Styling for the links */
+.footer_navbar a {
+    color: var(--pinkish-text); /* Peach cream color */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    padding: 13px; /* Padding around the link text */
+    font-family: 'Gloock', 'Georgia'; /* Font for links */
+    font-size: 80%;
+    display: block; /* Block display for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.footer_navbar a:hover {
+    background-color: var(--accent); /* Darker background color on hover */
+    border-radius: 6px; /* Optional: rounded corners for hover effect */
+    color: var(--mint-text); /* Optional: change text color on hover for better contrast */
+    font-size: 90%;
+
+}
+
+/* Ensuring links take full space of list items */
+.footer_navbar ul li a {
+    display: block; /* Ensure links take full space of list items */
+}
+
 .image_container {
     position: relative;
     width: 100%;
@@ -172,6 +235,7 @@ h2{
     color: var(--dark-mint);
     display: flex;
     justify-content: center;
+
     align-items: center;
     border-radius: 50%; /* Creates a perfect oval */
     text-align: center;
