@@ -304,7 +304,7 @@ h2{
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 16px; /* Font size for button text */
     text-align:center;
-    height: 20vw;
+    height: 10vw;
     width: 25vh;
 }
 
