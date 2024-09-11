@@ -115,7 +115,7 @@ h2 {
     text-decoration: none; /* Remove underline */
     text-align: center;
     padding: 13px; /* Padding around the link text */
-    font-family: var(--main-font); /* Font for links */
+    font-family: var(--secondary-font); /* Font for links */
     font-size: 80%;
     display: block; /* Block display for links */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
@@ -214,7 +214,7 @@ h2 {
 }
 
 .geode {
-    display: none; /* Hide all slides initially */
+    display: block; 
     position: absolute;
     width: 100vw; /* Ensure each slide takes up the full width of the container */
     height: 100vh; /* Ensure each slide takes up the full height of the container */
@@ -273,12 +273,12 @@ h2 {
 
 .flex-box {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for slide change */
-    width: 100%; /* Full width of the slider container */
-    height: 100%; /* Full height of the slider container */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    flex-wrap: nowrap; 
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%; 
+    justify-content: center; 
+    align-items: center;
 }
 
 main {

@@ -200,6 +200,7 @@ h2{
 }
 .geode{
     transform: scale(0.8);
+    display: block;
 }
 .center {
     position: relative;
