@@ -141,6 +141,11 @@ h2 {
     display: flex; /* Flex container for navbar */
     justify-content: space-between; /* Space between the name and links */
     align-items: center; /* Center items vertically */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+
 }
 
 /* Styling for the list within the navbar */
@@ -157,17 +162,6 @@ h2 {
 .footer_navbar ul li {
     margin: 0; /* Remove default margin from list items */
     padding: 0; /* Remove default padding if needed */
-}
-
-/* Styling for the name section */
-.footer_navbar .name {
-    color: var(--name-light-blue); /* Light yellow color for name */
-    text-decoration: none; /* Remove underline */
-    background-color: var(--darker-blue); /* Dark teal background */
-    border-radius: 8px; 
-    padding: 15px;
-    font-size: 160%; /* Larger font size */
-    font-family: var(--main-font); /* Serif font for name */
 }
 
 /* Styling for the links */
@@ -220,7 +214,12 @@ h2 {
 }
 
 .geode {
-    transform: scale(0.5);
+    display: none; /* Hide all slides initially */
+    position: absolute;
+    width: 100vw; /* Ensure each slide takes up the full width of the container */
+    height: 100vh; /* Ensure each slide takes up the full height of the container */
+    justify-content: center;
+    justify-items: center;
 }
 
 .center {
@@ -234,47 +233,47 @@ h2 {
 
 .border_container {
     display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     overflow: hidden;
     position: relative;
     width: 90vh;
     height: 85vh; /* Adjust as needed */
-    background-image: url('canyon_border.png');
+    background-image: url('sunflower-border.png');
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
+
 /* Image acting as a border */
 
+/* Oval text container */
 .oval_text_container {
     position: absolute;
-    background-size: contain;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    clip-path: circle(); /* Ensures the element is circular */
     width: 35%; /* Adjust size for the oval */
     height: 43%; /* Adjust height for the oval */
-    background-color: var(--darker-blue); /* Darker pink background */
-    opacity: 0.95;
+    background-color: var(--dark-mint); /* Darker pink background */
+    opacity: 0.85;
     color: var(--text-dark-blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* Creates a perfect oval */
+    display: flex; /* Flexbox for centering the text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    top: 50%; /* Center vertically in the parent */
+    left: 50%; /* Center horizontally in the parent */
+    transform: translate(-50%, -50%); /* Proper centering accounting for the oval size */
     text-align: center;
-    padding: 0px;
-    font-size: 160%;
 }
 
 .flex-box {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    gap: 10px; /* Space between items */
-    padding: 0px; /* Padding inside the container */
-    width: 100%; /* Full width of the container */
-    height: 100vh; /* Full viewport height */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for slide change */
+    width: 100%; /* Full width of the slider container */
+    height: 100%; /* Full height of the slider container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 main {
