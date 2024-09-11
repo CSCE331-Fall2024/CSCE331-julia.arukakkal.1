@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <link rel="stylesheet" href="mystyle.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -40,16 +40,19 @@
             <div id="posts-container"></div>
         </section>
     </main>
-    <nav class="navbar">
+    
+    <nav class="footer_navbar">
         <div class="links">
             <ul>
                 <li><a href="https://www.linkedin.com/in/julia-arukakkal-416358aa/"><i class="fa fa-lg fa-linkedin-square"></i>   Linkedin</a></li>
                 <li><a href="https://github.com/juaruk"><i class="fa fa-lg fa-github"></i>   Personal GitHub</a></li>
                 <li><a href="mailto:julia.arukakkal@gmail.com"><i class="fa fa-lg fa-envelope"></i>   Email</a></li>
+                <li><button id="toggle-theme">Change Theme</button></li>
             </ul>
         </div>
     </nav>
-    <script src="script.js"></script>
+
+    <script src="theme_switch.js"></script>
     
 </body>
 </html>

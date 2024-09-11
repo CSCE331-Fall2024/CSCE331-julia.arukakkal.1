@@ -20,7 +20,8 @@ body {
     color: var(--text-dark-blue); /* Dark pink text color */
     font-family: var(--secondary-font); /* Secondary font for body text */
     margin: 0;
-    padding: 0;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
     box-sizing: border-box;
 }
 

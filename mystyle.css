@@ -264,6 +264,53 @@ h2{
     overflow: hidden
 }
 
+.style1 {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between image and text */
+    margin: 20px 0; /* Adjust top and bottom margins */
+}
+
+.style1 img {
+    width: 45vh;
+    height: 45vh; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.style1 p {
+    margin: 0; /* Remove default margin for better alignment */
+    font-size: 14px; /* Adjust text size if needed */
+}
+
+.tech-skills {
+    list-style-type: none; /* Remove default list styling */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 0; /* Remove default padding */
+}
+
+.tech-skills li {
+    margin: 10 px; /* Space between list items */
+}
+
+.tech-button {
+    background-color: var(--section); 
+    color: var(--bg-volcano); 
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    text-align:center;
+    height: 20vw;
+    width: 25vh;
+}
+
+.tech-button:hover {
+    background-color: var(--name); /* Darker blue on hover */
+}
 /*.flex-box > * {
     width: 100%; /* Ensure items take full width of their grid cell */
 
