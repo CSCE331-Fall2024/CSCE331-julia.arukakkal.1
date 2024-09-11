@@ -220,6 +220,10 @@ h2 {
     height: 100vh; /* Ensure each slide takes up the full height of the container */
     justify-content: center;
     justify-items: center;
+    top: 95%;
+    left: 45%;
+    object-fit: cover;
+    transform:scale(1.4);
 }
 
 .center {
@@ -258,6 +262,7 @@ h2 {
     opacity: 0.85;
     color: var(--text-dark-blue);
     display: flex; /* Flexbox for centering the text */
+    flex-wrap: wrap;
     justify-content: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     top: 50%; /* Center vertically in the parent */
