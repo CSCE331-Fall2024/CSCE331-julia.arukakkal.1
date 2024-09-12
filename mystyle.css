@@ -321,7 +321,7 @@ h2{
 
   /* Polaroid styling for each photo container */
   .polaroid {
-    background: whitesmoke;
+    background: var(--section);
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -341,8 +341,8 @@ h2{
   /* Caption under the image */
   .caption {
     font-family: 'Courier New', Courier, monospace;
-    color: #333;
-    font-size: 14px;
+    color: var(--pinkish-text);
+    font-size: 10px;
     margin-top: 10px;
   }
 
